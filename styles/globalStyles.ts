@@ -1,0 +1,11 @@
+// GlobalStyles.js
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 18px;
+  }
+`;
