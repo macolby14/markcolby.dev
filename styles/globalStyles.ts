@@ -61,11 +61,17 @@ table {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-weight-light: 300;
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-bold: 700;
   --color-primary: blue;
 
-  // Typography scale is Perfect Fourth from https://type-scale.com/
-
+  // Typography scale is from https://material.io/design/typography/the-type-system.html#type-scale
+  --font-size-1: 6rem;
+  --font-size-2: 3.75rem;
+  --font-size-3: 3rem;
+  --font-size-4: 2.125rem;
+  --font-size-5: 1.5rem;
+  --font-size-6: 1.25rem;
 }
 
 
@@ -99,10 +105,6 @@ table {
     font-weight: var(--font-weight-light);
   }
 
-  h1, h2, h3, h4, h5, h6, strong{
-    font-weight: var(--font-weight-bold);
-  }
-
   h1, h2, h3, h4, h5, h6, p {
     text-rendering: optimizeLegibility;
   }
@@ -110,10 +112,54 @@ table {
   p{
     margin-bottom: 1.5em;
     font-size: 1.125rem;
+    letter-spacing: 0.5px;
+  }
+
+  strong{
+    font-weight: var(----font-weight-bold);
   }
 
   em{
     font-style: italic;
   }
+
+  // Typography Scale- https://material.io/design/typography/the-type-system.html#type-scale
+  h1{
+    font-size: var(--font-size-1);
+    font-weight: var(----font-weight-light);
+    letter-spacing: -1.5px;
+  }
+
+  h2{
+    font-size: var(--font-size-2);
+    font-weight: var(----font-weight-light);
+    letter-spacing: -0.5px;
+  }
+
+  h3{
+    font-size: var(--font-size-3);
+    font-weight: var(----font-weight-regular);
+    letter-spacing: 0px;
+  }
+
+  h4{
+    font-size: var(--font-size-4);
+    font-weight: var(----font-weight-regular);
+    letter-spacing: 0.25px;
+  }
+
+  h5{
+    font-size: var(--font-size-5);
+    font-weight: var(----font-weight-regular);
+    letter-spacing: 0px;
+  }
+
+  h6{
+    font-size: var(--font-size-6);
+    font-weight: var(----font-weight-medium);
+    letter-spacing: 0.15px;
+  }
+
+  
 
 `;
