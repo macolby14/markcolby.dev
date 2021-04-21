@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { Box } from "../components/Box";
+import { Intro } from "../components/Intro";
 
 export default function Home() {
   return (
@@ -9,7 +11,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Main</h1>
+        <Box maxWidth={1600} gutter={32}>
+          <Intro />
+        </Box>
       </main>
 
       <footer>
