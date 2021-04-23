@@ -10,7 +10,7 @@ interface WrapperProps {
 const Wrapper = styled.div<WrapperProps>`
   margin: 0 auto;
   max-width: ${(props) => props.maxWidth}px;
-  padding: ${(props) => props.gutter}px;
+  padding: 0 ${(props) => props.gutter}px;
 `;
 
 interface Props extends WrapperProps {

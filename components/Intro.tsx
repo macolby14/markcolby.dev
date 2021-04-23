@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Box } from "./Box";
 
 const LinkBreak = styled.div`
-  --line-margin-left: -64px;
+  --line-margin-left: -92px;
   --icon-padding-sides: 8px;
 
   display: flex;
