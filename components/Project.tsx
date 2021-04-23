@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const Wrapper = styled.article`
   border: 1px solid black;
@@ -32,22 +33,29 @@ const ProjectDescription = styled.div`
   }
 `;
 
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
 export function Project() {
   return (
-    <a href="/test">
-      <Wrapper>
-        <ImageContainer>
-          <img src="/Home_Screenshot.jpg" alt="Home Page" />
-        </ImageContainer>
-        <ProjectDescription>
-          <h3>Jogging Beats</h3>
-          <p>
-            A site that uses the Spotify API to allow users to quickly generate
-            playlists to a certain running beats per minute.
-          </p>
-          <p>This is the tech stack</p>
-        </ProjectDescription>
-      </Wrapper>
-    </a>
+    <Link href="/test" passHref>
+      <StyledLink>
+        <Wrapper>
+          <ImageContainer>
+            <img src="/Home_Screenshot.jpg" alt="Home Page" />
+          </ImageContainer>
+          <ProjectDescription>
+            <h3>Jogging Beats</h3>
+            <p>
+              A site that uses the Spotify API to allow users to quickly
+              generate playlists to a certain running beats per minute.
+            </p>
+            <p>This is the tech stack</p>
+          </ProjectDescription>
+        </Wrapper>
+      </StyledLink>
+    </Link>
   );
 }
