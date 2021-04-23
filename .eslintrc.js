@@ -25,6 +25,7 @@ module.exports = {
     "react/jsx-filename-extension": ["warn", { extensions: [".tsx", ".jsx"] }],
     "no-unused-vars": "warn",
     "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
