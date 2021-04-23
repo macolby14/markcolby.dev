@@ -5,7 +5,6 @@ const Wrapper = styled.section`
   margin-top: 32px;
   h2 {
     margin-bottom: 16px;
-    margin-left: 96px;
   }
   p {
     font-size: var(--font-size-6);
