@@ -47,24 +47,4 @@ export async function getStaticProps() {
   });
 
   return { props: { projectsMeta } };
-
-  // const posts = filenames.map((filename) => {
-  //   const filePath = path.join(postsDirectory, filename);
-  //   const fileContents = fs.readFileSync(filePath, "utf8");
-
-  //   // Generally you would parse/transform the contents
-  //   // For example you can transform markdown to HTML here
-
-  //   return {
-  //     filename,
-  //     content: fileContents,
-  //   };
-  // });
-  // // By returning { props: posts }, the Blog component
-  // // will receive `posts` as a prop at build time
-  // return {
-  //   props: {
-  //     posts,
-  //   },
-  // };
 }
