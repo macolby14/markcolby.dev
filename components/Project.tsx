@@ -5,7 +5,7 @@ import { ProjectMetadata } from "../global";
 const Wrapper = styled.article``;
 
 const FlexWrapper = styled.div`
-  border: 1px solid black;
+  box-shadow: var(--shadow);
   padding: 8px 32px;
   margin: 0px -32px;
   border-radius: 4px;
@@ -48,16 +48,15 @@ interface Props extends ProjectMetadata {
 export function Project({ className = "", title, description, slug }: Props) {
   return (
     <Wrapper className={className}>
-      <Link href="/test" passHref>
-        <StyledLink className={className}>
+      <Link href={`/project/${slug}`} passHref>
+        <StyledLink>
           <FlexWrapper>
-            <ImageContainer className={className}>
+            <ImageContainer>
               <img src="/Home_Screenshot.jpg" alt="Home Page" />
             </ImageContainer>
             <ProjectDescription>
               <h3>{title}</h3>
               <p>{description}</p>
-              <p>Slug: {slug}</p>
               <p>This is the tech stack</p>
             </ProjectDescription>
           </FlexWrapper>

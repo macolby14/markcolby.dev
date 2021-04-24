@@ -72,6 +72,8 @@ table {
   --font-size-4: 2.125rem;
   --font-size-5: 1.5rem;
   --font-size-6: 1.25rem;
+
+  --shadow: 2px 2px 10px hsl(0deg,0%,0%,0.3);
 }
 
 
