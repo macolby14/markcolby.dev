@@ -1,3 +1,4 @@
+import React from "react"; // eslint-disable-line no-use-before-define
 import styled from "styled-components";
 import { Box } from "../../components/Box";
 import { ButtonLink } from "../../components/ButtonLink";
@@ -59,7 +60,11 @@ const ImageWrapper = styled.div`
   }
 `;
 
-export default function JoggingBeats() {
+interface LayoutProps {
+  technicalChallenges: React.ReactNode;
+}
+
+function Layout({ technicalChallenges }: LayoutProps) {
   return (
     <main>
       <Box maxWidth={1200} gutter={96}>
@@ -116,26 +121,7 @@ export default function JoggingBeats() {
             </ImageWrapper>
           </AdditionalImages>
           <h4>Technical Challenges</h4>
-          <h5>Authorization</h5>
-          <p>
-            I learned a lot about authorization during this project. I needed to
-            use OAuth for the user&apos;s Spotify account to allow them to be
-            able to save the playlists to their Spotify account. Luckily,
-            Spotify has great{" "}
-            <a href="https://developer.spotify.com/documentation/general/guides/authorization-guide/">
-              API documentation about this.
-            </a>
-            I use two different types of Authorization flows on the site, server
-            side authorization code flow with Jogging Beat&apos;s Client
-            credentials to allow user&apos;s to generate playlist without
-            logging in and Implicit Grant Authorization flow to allow the user
-            to give Jogging Beats permission to save new playlists on their
-            Spotify account (I would use PKCE flow in the future for additional
-            security). For the server side authorization code, I used Next.js
-            serverless functions via API routes to store my client secrets. The
-            Next.js API routes were very intuitive and I definitely plan on
-            using them again for projects with limited server-side work.
-          </p>
+          {technicalChallenges}
           <h4>Lessons Learned</h4>
           <p>
             I learned a lot about server side rendering, authorization and
@@ -151,4 +137,32 @@ export default function JoggingBeats() {
       </Box>
     </main>
   );
+}
+
+const technicalChallengesProp = (
+  <>
+    <h5>Authorization</h5>
+    <p>
+      I learned a lot about authorization during this project. I needed to use
+      OAuth for the user&apos;s Spotify account to allow them to be able to save
+      the playlists to their Spotify account. Luckily, Spotify has great{" "}
+      <a href="https://developer.spotify.com/documentation/general/guides/authorization-guide/">
+        API documentation about this.
+      </a>
+      I use two different types of Authorization flows on the site, server side
+      authorization code flow with Jogging Beat&apos;s Client credentials to
+      allow user&apos;s to generate playlist without logging in and Implicit
+      Grant Authorization flow to allow the user to give Jogging Beats
+      permission to save new playlists on their Spotify account (I would use
+      PKCE flow in the future for additional security). For the server side
+      authorization code, I used Next.js serverless functions via API routes to
+      store my client secrets. The Next.js API routes were very intuitive and I
+      definitely plan on using them again for projects with limited server-side
+      work.
+    </p>
+  </>
+);
+
+export default function JoggingBeats() {
+  return <Layout technicalChallenges={technicalChallengesProp} />;
 }
