@@ -23,9 +23,7 @@ export default function Home({ projectsMeta }: Props) {
         <Box maxWidth={1600} gutter={32}>
           <Intro />
           <About />
-          {projectsMeta.map((project) => (
-            <div key={project.title}>{project.title}</div>
-          ))}
+          <Projects projects={projectsMeta} />
         </Box>
       </main>
 
