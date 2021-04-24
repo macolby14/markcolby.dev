@@ -38,10 +38,13 @@ export async function getStaticProps() {
   const postsDirectory = path.join(process.cwd(), "pages/project");
   const filenames = fs.readdirSync(postsDirectory);
 
-  const projectsMeta = filenames.map(
+  const projectsMeta = filenames.map((name) => {
     // eslint-disable-next-line import/no-dynamic-require
-    (name) => require(`./project/${name}`).metadata
-  ) as ProjectMetadata[];
+    const existingMeta = require(`./project/${name}`).metadata;
+    const slug = name.replace(/\.[^/.]+$/, "");
+    const updatedMeta = { ...existingMeta, slug };
+    return updatedMeta as ProjectMetadata[];
+  });
 
   return { props: { projectsMeta } };
 

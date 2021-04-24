@@ -1,6 +1,6 @@
 import { ProjectMetadata } from "../../global";
 
-export const metadata: ProjectMetadata = {
+export const metadata: Omit<ProjectMetadata, "slug"> = {
   title: "Colonist.io",
   description: "Colonist Site",
 };

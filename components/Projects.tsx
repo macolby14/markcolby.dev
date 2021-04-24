@@ -22,8 +22,13 @@ export function Projects({ projects }: Props) {
     <Wrapper>
       <Box maxWidth={1200} gutter={96}>
         <h2>Projects</h2>
-        {projects.map(({ title, description }) => (
-          <StyledProject key={title} title={title} description={description} />
+        {projects.map(({ title, description, slug }) => (
+          <StyledProject
+            key={title}
+            title={title}
+            description={description}
+            slug={slug}
+          />
         ))}
       </Box>
     </Wrapper>

@@ -1,6 +1,6 @@
 import { ProjectMetadata } from "../../global";
 
-export const metadata: ProjectMetadata = {
+export const metadata: Omit<ProjectMetadata, "slug"> = {
   title: "Jogging Beats",
   description:
     "A site that uses the Spotify API to allow users to quickly generate playlists to a certain running beats per minute.",

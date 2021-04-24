@@ -45,7 +45,7 @@ interface Props extends ProjectMetadata {
   className?: string;
 }
 
-export function Project({ className = "", title, description }: Props) {
+export function Project({ className = "", title, description, slug }: Props) {
   return (
     <Wrapper className={className}>
       <Link href="/test" passHref>
@@ -57,6 +57,7 @@ export function Project({ className = "", title, description }: Props) {
             <ProjectDescription>
               <h3>{title}</h3>
               <p>{description}</p>
+              <p>Slug: {slug}</p>
               <p>This is the tech stack</p>
             </ProjectDescription>
           </FlexWrapper>
