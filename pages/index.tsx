@@ -5,12 +5,13 @@ import { About } from "../components/About";
 import { Box } from "../components/Box";
 import { Intro } from "../components/Intro";
 import { Projects } from "../components/Projects";
+import { ProjectMetadata } from "../global";
 
 interface Props {
-  filenames: string[];
+  projectsMeta: ProjectMetadata[];
 }
 
-export default function Home({ filenames }: Props) {
+export default function Home({ projectsMeta }: Props) {
   return (
     <div>
       <Head>
@@ -22,7 +23,9 @@ export default function Home({ filenames }: Props) {
         <Box maxWidth={1600} gutter={32}>
           <Intro />
           <About />
-          <Projects />
+          {projectsMeta.map((project) => (
+            <div key={project.title}>{project.title}</div>
+          ))}
         </Box>
       </main>
 
@@ -34,12 +37,15 @@ export default function Home({ filenames }: Props) {
 }
 
 export async function getStaticProps() {
-  const postsDirectory = path.join(process.cwd(), "projects");
+  const postsDirectory = path.join(process.cwd(), "pages/project");
   const filenames = fs.readdirSync(postsDirectory);
 
-  console.log(filenames);
+  const projectsMeta = filenames.map(
+    // eslint-disable-next-line import/no-dynamic-require
+    (name) => require(`./project/${name}`).metadata
+  ) as ProjectMetadata[];
 
-  return { props: { filenames } };
+  return { props: { projectsMeta } };
 
   // const posts = filenames.map((filename) => {
   //   const filePath = path.join(postsDirectory, filename);
