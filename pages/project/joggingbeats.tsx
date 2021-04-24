@@ -41,6 +41,24 @@ const MainImage = styled.img`
   margin: 64px 0;
 `;
 
+const AdditionalImages = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 48px;
+`;
+
+const ImageWrapper = styled.div`
+  flex: 1 1 50%;
+
+  img {
+    width: 100%;
+    height: auto;
+    box-shadow: var(--shadow);
+  }
+`;
+
 export default function JoggingBeats() {
   return (
     <main>
@@ -83,10 +101,20 @@ export default function JoggingBeats() {
             certain, it allow&apos; to easily create <em>new</em> playlists each
             run, so I&apos; always listening to different music.
           </p>
-          {/* <div>
-            <img src="/joggingbeats/Selection_Screenshot.jpg" />
-            <img src="/joggingbeats/Selection_Screenshot.jpg" />
-          </div> */}
+          <AdditionalImages>
+            <ImageWrapper>
+              <img
+                src="/joggingbeats/Selection_Screenshot.jpg"
+                alt="Selection Screenshot"
+              />
+            </ImageWrapper>
+            <ImageWrapper>
+              <img
+                src="/joggingbeats/Confirmation_Screenshot.jpg"
+                alt="Confirmation Screenshot"
+              />
+            </ImageWrapper>
+          </AdditionalImages>
           <h4>Technical Challenges</h4>
           <h5>Authorization</h5>
           <p>
