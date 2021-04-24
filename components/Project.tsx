@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { ProjectMetadata } from "../global";
 
 const Wrapper = styled.article``;
 
@@ -40,11 +41,11 @@ const StyledLink = styled.a`
   color: inherit;
 `;
 
-interface Props {
+interface Props extends ProjectMetadata {
   className?: string;
 }
 
-export function Project({ className }: Props) {
+export function Project({ className = "", title, description }: Props) {
   return (
     <Wrapper className={className}>
       <Link href="/test" passHref>
@@ -54,11 +55,8 @@ export function Project({ className }: Props) {
               <img src="/Home_Screenshot.jpg" alt="Home Page" />
             </ImageContainer>
             <ProjectDescription>
-              <h3>Jogging Beats</h3>
-              <p>
-                A site that uses the Spotify API to allow users to quickly
-                generate playlists to a certain running beats per minute.
-              </p>
+              <h3>{title}</h3>
+              <p>{description}</p>
               <p>This is the tech stack</p>
             </ProjectDescription>
           </FlexWrapper>
