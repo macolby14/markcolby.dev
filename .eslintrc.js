@@ -47,6 +47,7 @@ module.exports = {
       },
     ],
     "global-require": "off",
+    "react/require-default-props": "off",
   },
   settings: {
     "import/resolver": {
