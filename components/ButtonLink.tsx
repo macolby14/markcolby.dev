@@ -21,12 +21,12 @@ const COLORS = {
 
 const SIZES = {
   small: {
-    "--borderRadius": `${2}px`,
+    "--borderRadius": `${4}px`,
     "--fontSize": `${1}rem`,
     "--padding": "4px 12px",
   },
   medium: {
-    "--borderRadius": `${2}px`,
+    "--borderRadius": `${4}px`,
     "--fontSize": `${18 / 16}rem`,
     "--padding": "12px 20px",
   },
@@ -40,6 +40,7 @@ const SIZES = {
 const ButtonBase = styled.a<{ style: any }>`
   text-decoration: none;
   color: inherit;
+  font-weight: var(--font-weight-medium);
   font-size: var(--fontSize);
   padding: var(--padding);
   border-radius: var(--borderRadius);
@@ -95,7 +96,9 @@ export function ButtonLink({ variant, size, href, children }: Props) {
 
   return (
     <Link href={href} passHref>
-      <Component style={styles}>{children}</Component>
+      <Component style={styles} target="_black" rel="noopener noreferrer">
+        {children}
+      </Component>
     </Link>
   );
 }
