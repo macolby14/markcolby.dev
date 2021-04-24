@@ -43,6 +43,10 @@ const ProjectDescription = styled.div`
     font-size: var(--font-size-6);
     font-weight: var(--font-weight-regular);
   }
+
+  h3 {
+    margin-bottom: 8px;
+  }
 `;
 
 const StyledLink = styled.a`
@@ -54,7 +58,13 @@ interface Props extends ProjectMetadata {
   className?: string;
 }
 
-export function Project({ className = "", title, description, slug }: Props) {
+export function Project({
+  className = "",
+  title,
+  description,
+  slug,
+  tech,
+}: Props) {
   return (
     <Wrapper className={className}>
       <Link href={`/project/${slug}`} passHref>
@@ -66,7 +76,7 @@ export function Project({ className = "", title, description, slug }: Props) {
             <ProjectDescription>
               <h3>{title}</h3>
               <p>{description}</p>
-              <p>This is the tech stack</p>
+              <p>Tech Used: {tech}</p>
             </ProjectDescription>
           </FlexWrapper>
         </StyledLink>

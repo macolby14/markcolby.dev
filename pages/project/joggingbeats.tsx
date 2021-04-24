@@ -3,7 +3,8 @@ import { ProjectMetadata } from "../../global";
 export const metadata: Omit<ProjectMetadata, "slug"> = {
   title: "Jogging Beats",
   description:
-    "A site that uses the Spotify API to allow users to quickly generate playlists to a certain running beats per minute.",
+    "A site that uses the Spotify API to allows users to quickly and easily generate workout playlists with songs to a certain tempo (beats per minute). Created to help me create running playlists.",
+  tech: "Typescript, React, Next.js, Styled Components",
 };
 
 export default function JoggingBeats() {
