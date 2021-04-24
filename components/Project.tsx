@@ -14,14 +14,23 @@ const FlexWrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    img {
+      padding: 0%;
+    }
+  }
 `;
 
 const ImageContainer = styled.div`
   flex: 0 1 300px;
+  height: 200px;
 
   img {
     max-width: 100%;
     height: auto;
+    padding: 10%;
+    transition: padding 1s;
   }
 `;
 
