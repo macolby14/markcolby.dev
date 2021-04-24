@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-const Wrapper = styled.article`
+const Wrapper = styled.article``;
+
+const FlexWrapper = styled.div`
   border: 1px solid black;
   padding: 8px 32px;
   margin: 0px -32px;
@@ -38,24 +40,30 @@ const StyledLink = styled.a`
   color: inherit;
 `;
 
-export function Project() {
+interface Props {
+  className?: string;
+}
+
+export function Project({ className }: Props) {
   return (
-    <Link href="/test" passHref>
-      <StyledLink>
-        <Wrapper>
-          <ImageContainer>
-            <img src="/Home_Screenshot.jpg" alt="Home Page" />
-          </ImageContainer>
-          <ProjectDescription>
-            <h3>Jogging Beats</h3>
-            <p>
-              A site that uses the Spotify API to allow users to quickly
-              generate playlists to a certain running beats per minute.
-            </p>
-            <p>This is the tech stack</p>
-          </ProjectDescription>
-        </Wrapper>
-      </StyledLink>
-    </Link>
+    <Wrapper className={className}>
+      <Link href="/test" passHref>
+        <StyledLink className={className}>
+          <FlexWrapper>
+            <ImageContainer className={className}>
+              <img src="/Home_Screenshot.jpg" alt="Home Page" />
+            </ImageContainer>
+            <ProjectDescription>
+              <h3>Jogging Beats</h3>
+              <p>
+                A site that uses the Spotify API to allow users to quickly
+                generate playlists to a certain running beats per minute.
+              </p>
+              <p>This is the tech stack</p>
+            </ProjectDescription>
+          </FlexWrapper>
+        </StyledLink>
+      </Link>
+    </Wrapper>
   );
 }

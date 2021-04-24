@@ -9,6 +9,10 @@ const Wrapper = styled.section`
   }
 `;
 
+const StyledProject = styled(Project)`
+  margin-bottom: 16px;
+`;
+
 interface Props {
   projects: ProjectMetadata[];
 }
@@ -19,7 +23,7 @@ export function Projects({ projects }: Props) {
       <Box maxWidth={1200} gutter={96}>
         <h2>Projects</h2>
         {projects.map((project) => (
-          <Project key={project.title} />
+          <StyledProject key={project.title} />
         ))}
       </Box>
     </Wrapper>
