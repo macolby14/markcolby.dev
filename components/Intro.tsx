@@ -4,12 +4,14 @@ import { Box } from "./Box";
 const Wrapper = styled.header`
   line-height: 1.45; //had to add this after moving Intro from main to header
   margin-top: 48px;
-  min-height: 80vh;
-  display: grid;
-  place-items: center;
 `;
 
-const StyledBox = styled(Box)``;
+const StyledBox = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  justify-content: center;
+`;
 
 const LinkBreak = styled.div`
   --line-margin-left: -92px;
