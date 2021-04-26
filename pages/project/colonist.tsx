@@ -7,6 +7,7 @@ export const metadata: Omit<ProjectMetadata, "slug"> = {
   description:
     "Colonist.io is an online board game that is similar to Settlers of Catan, with over 700,000 monthly active users in 2020. I contributed two popular features and fixed three critical bugs.",
   tech: "Typescript, Git, Docker, Express.js, Mocha.js",
+  previewImg: { src: "/colonist/uk_map.jpg", alt: "Game Map Screenshot" },
 };
 
 const motivation = (
@@ -66,7 +67,7 @@ const links = {
 };
 
 const images = [
-  { src: "/colonist/uk_map.jpg", alt: "Game Map Screenshot" },
+  metadata.previewImg,
   {
     src: "/colonist/room_name_from_setting.gif",
     alt: "Create Room Name from Setting Screenshot",

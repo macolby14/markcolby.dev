@@ -64,6 +64,7 @@ export function Project({
   description,
   slug,
   tech,
+  previewImg,
 }: Props) {
   return (
     <Wrapper className={className}>
@@ -71,7 +72,7 @@ export function Project({
         <StyledLink>
           <FlexWrapper>
             <ImageContainer>
-              <img src="/Home_Screenshot.jpg" alt="Home Page" />
+              <img src={previewImg.src} alt={previewImg.alt} />
             </ImageContainer>
             <ProjectDescription>
               <h3>{title}</h3>

@@ -7,6 +7,7 @@ export const metadata: Omit<ProjectMetadata, "slug"> = {
   description:
     "Jogging Beats is a web application I built to help create running playlists. It integrates with the Spotify API to allow a user to generate and edit playlists with songs all at the same tempo and add them to the user’s Spotify account.",
   tech: "Typescript, React, Next.js, Styled Components",
+  previewImg: { src: "/joggingbeats/home.jpg", alt: "Home Page Screenshot" },
 };
 
 const motivation = (
@@ -69,7 +70,7 @@ const links = {
 };
 
 const images = [
-  { src: "/joggingbeats/home.jpg", alt: "Home Page Screenshot" },
+  metadata.previewImg,
   { src: "/joggingbeats/confirmation.jpg", alt: "Confirmation Screenshot" },
   { src: "/joggingbeats/selection.jpg", alt: "Selection Screenshot" },
 ];
