@@ -44,7 +44,7 @@ export function Nav() {
     <Wrapper>
       <List>
         <li>
-          <ScrollLink to="/intro" spy smooth duration={500}>
+          <ScrollLink to="intro" spy smooth duration={500}>
             Intro
           </ScrollLink>
         </li>
