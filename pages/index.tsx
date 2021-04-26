@@ -16,10 +16,6 @@ interface Props {
 export default function Home({ projectsMeta }: Props) {
   return (
     <>
-      <Head>
-        <title>Mark Colby - Programmer</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Intro />
       <Nav />
       <main>
