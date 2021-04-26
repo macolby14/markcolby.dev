@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { ProjectMetadata } from "../global";
+import { ProjectMetadata } from "../types";
 
 const Wrapper = styled.article``;
 

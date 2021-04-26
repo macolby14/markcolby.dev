@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ProjectMetadata } from "../global";
+import { ProjectMetadata } from "../types";
 import { Box } from "./Box";
 import { Project } from "./Project";
 

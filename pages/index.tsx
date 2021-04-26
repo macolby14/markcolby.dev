@@ -5,7 +5,7 @@ import { About } from "../components/About";
 import { Box } from "../components/Box";
 import { Intro } from "../components/Intro";
 import { Projects } from "../components/Projects";
-import { ProjectMetadata } from "../global";
+import { ProjectMetadata } from "../types";
 
 interface Props {
   projectsMeta: ProjectMetadata[];

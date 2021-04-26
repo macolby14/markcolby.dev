@@ -1,6 +1,6 @@
 import React from "react"; // eslint-disable-line no-use-before-define
 import { Layout } from "../../components/ProjectLayout";
-import { ProjectMetadata } from "../../global";
+import { ProjectMetadata } from "../../types";
 
 export const metadata: Omit<ProjectMetadata, "slug"> = {
   title: "Jogging Beats",
