@@ -15,11 +15,12 @@ const Wrapper = styled.div<WrapperProps>`
 
 interface Props extends WrapperProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-export function Box({ children, maxWidth, gutter }: Props) {
+export function Box({ children, maxWidth, gutter, className = "" }: Props) {
   return (
-    <Wrapper maxWidth={maxWidth} gutter={gutter}>
+    <Wrapper className={className} maxWidth={maxWidth} gutter={gutter}>
       {children}
     </Wrapper>
   );

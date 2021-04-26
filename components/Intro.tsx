@@ -7,6 +7,8 @@ const Wrapper = styled.header`
   min-height: 80vh;
 `;
 
+const StyledBox = styled(Box)``;
+
 const LinkBreak = styled.div`
   --line-margin-left: -92px;
   --icon-padding-sides: 8px;
@@ -42,7 +44,7 @@ const Line = styled.hr<{ growRatio: number }>`
 export function Intro() {
   return (
     <Wrapper>
-      <Box maxWidth={1000} gutter={96}>
+      <StyledBox maxWidth={1000} gutter={96}>
         <h1>Hi, I&apos;m Mark</h1>
         <h4>Code Enthusiast</h4>
         <h4>Submarine Veteran</h4>
@@ -72,7 +74,7 @@ export function Intro() {
           </a>
           <Line growRatio={1} />
         </LinkBreak>
-      </Box>
+      </StyledBox>
     </Wrapper>
   );
 }
