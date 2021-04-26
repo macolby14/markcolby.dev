@@ -4,6 +4,7 @@ import { ProjectMetadata } from "../types";
 import { Box } from "./Box";
 import { ButtonLink } from "./ButtonLink";
 import { Footer } from "./Footer";
+import { ProjectNav } from "./Nav";
 
 const Wrapper = styled.section`
   h2 {
@@ -99,6 +100,7 @@ export function Layout({
 
   return (
     <>
+      <ProjectNav />
       <main>
         <Box maxWidth={1200} gutter={96} mobileGutter={16}>
           <Wrapper>

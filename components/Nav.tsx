@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -18,6 +19,11 @@ const List = styled.ul`
   justify-content: center;
   font-size: var(--font-size-5);
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   li:hover {
     cursor: pointer;
   }
@@ -34,19 +40,39 @@ export function Nav() {
     <Wrapper>
       <List>
         <li>
-          <Link to="intro" spy smooth duration={500}>
+          <ScrollLink to="/intro" spy smooth duration={500}>
             Intro
-          </Link>
+          </ScrollLink>
         </li>
         <li>
-          <Link to="about" spy smooth duration={500}>
+          <ScrollLink to="about" spy smooth duration={500}>
             About
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink to="projects" spy smooth duration={500}>
+            Projects
+          </ScrollLink>
+        </li>
+      </List>
+    </Wrapper>
+  );
+}
+
+export function ProjectNav() {
+  return (
+    <Wrapper>
+      <List>
+        <li>
+          <Link href="/#intro">
+            <a>Home</a>
           </Link>
         </li>
         <li>
-          <Link to="projects" spy smooth duration={500}>
-            Projects
-          </Link>
+          <Link href="/#about">About</Link>
+        </li>
+        <li>
+          <Link href="/#projects">Projects</Link>
         </li>
       </List>
     </Wrapper>
