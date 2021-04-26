@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { Box } from "./Box";
 
+const Wrapper = styled.header`
+  line-height: 1.45; //had to add this after moving Intro from main to header
+  margin-top: 48px;
+`;
+
 const LinkBreak = styled.div`
   --line-margin-left: -92px;
   --icon-padding-sides: 8px;
@@ -11,6 +16,7 @@ const LinkBreak = styled.div`
   margin-bottom: 100px;
   margin-left: var(--line-margin-left);
   max-width: 600px;
+
   i {
     color: var(--color-text);
     margin: 0 var(--icon-padding-sides);
@@ -34,7 +40,7 @@ const Line = styled.hr<{ growRatio: number }>`
 
 export function Intro() {
   return (
-    <>
+    <Wrapper>
       <Box maxWidth={1000} gutter={96}>
         <h1>Hi, I&apos;m Mark</h1>
         <h4>Code Enthusiast</h4>
@@ -66,6 +72,6 @@ export function Intro() {
           <Line growRatio={1} />
         </LinkBreak>
       </Box>
-    </>
+    </Wrapper>
   );
 }

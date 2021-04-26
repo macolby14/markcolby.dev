@@ -18,10 +18,9 @@ export default function Home({ projectsMeta }: Props) {
         <title>Mark Colby - Programmer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Intro />
       <main>
         <Box maxWidth={1600} gutter={32}>
-          <Intro />
           <About />
           <Projects projects={projectsMeta} />
         </Box>
