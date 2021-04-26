@@ -20,6 +20,11 @@ const FlexWrapper = styled.div`
       padding: 0%;
     }
   }
+
+  @media (max-width: 720px) {
+    padding: 8px 8px;
+    margin: 0px -8px;
+  }
 `;
 
 const ImageContainer = styled.div`
