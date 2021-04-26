@@ -18,23 +18,26 @@ export function About() {
         <h2>About me</h2>
         <p>Hey! I’m Mark, a software engineer who loves full-stack web tech.</p>
         <p>
-          I became captivated by programming in high school. We made Java applet
-          games in our computer science course for our end of year product and
-          this was the first time I ever wanted to stay up late to do homework.
-          Whether making games or building web tools, I love how coding gives me
-          the ability to solve problems.
+          I was first introduced to programming in high school. In my computer
+          science we made games using Java and I was instantly captivated,
+          staying up night after night to work on my Bomberman game. The ability
+          to turn code into tools that can automate work and organize
+          information immediately became my most powerful skill.
         </p>
         <p>
-          I joined the Navy after college and got to see the world. Kind of.
-          Actually, I couldn’t really see much most the time on the submarine.
-          But when we did get to pull into port it was really cool. More
-          importantly, submarines are really, really cool.
+          I joined the Navy after college and got to see the world on a
+          submarine. Kind of. Actually, I couldn’t really see much most the time
+          because we were underwater… But I really, enjoyed my time working in
+          both the engine room and in control, and I think submarines are
+          awesome pieces of technology!
         </p>
         <p>
-          When I’m not enjoying Hawaii with my wife, I use most of my time
-          listening about code, reading about code, or actually coding. I’m
-          seeking a full-time role as a software engineer where I can continue
-          to grow and make a positive impact at a company.
+          I’m currently stationed in Hawaii, preparing to transition to my first
+          job outside of the military. When I’m not enjoying Hawaii’s beaches or
+          trails with my wife, I use my time reading about code, listening about
+          code, or actually coding. I’m seeking a full-time role as a software
+          engineer at a company where I can continue to grow and make a positive
+          impact.
         </p>
       </Box>
     </Wrapper>
