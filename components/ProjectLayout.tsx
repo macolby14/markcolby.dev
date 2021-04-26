@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ProjectMetadata } from "../types";
 import { Box } from "./Box";
 import { ButtonLink } from "./ButtonLink";
+import { Footer } from "./Footer";
 
 const Wrapper = styled.section`
   h2 {
@@ -97,31 +98,34 @@ export function Layout({
   );
 
   return (
-    <main>
-      <Box maxWidth={1200} gutter={96} mobileGutter={16}>
-        <Wrapper>
-          <h2>{metadata.title}</h2>
-          <p>{metadata.description}</p>
-          {buttonComponent}
-          <h4>Tech Used</h4>
-          <p>{metadata.tech}</p>
-          <MainImage src={images[0].src} alt={images[0].alt} />
-          <h4>Project Motivation</h4>
-          {motivation}
-          <AdditionalImages>
-            <ImageWrapper>
-              <img src={images[1].src} alt={images[1].alt} />
-            </ImageWrapper>
-            <ImageWrapper>
-              <img src={images[2].src} alt={images[2].alt} />
-            </ImageWrapper>
-          </AdditionalImages>
-          <h4>Technical Challenges</h4>
-          {technicalChallenges}
-          <h4>Summary</h4>
-          {summary}
-        </Wrapper>
-      </Box>
-    </main>
+    <>
+      <main>
+        <Box maxWidth={1200} gutter={96} mobileGutter={16}>
+          <Wrapper>
+            <h2>{metadata.title}</h2>
+            <p>{metadata.description}</p>
+            {buttonComponent}
+            <h4>Tech Used</h4>
+            <p>{metadata.tech}</p>
+            <MainImage src={images[0].src} alt={images[0].alt} />
+            <h4>Project Motivation</h4>
+            {motivation}
+            <AdditionalImages>
+              <ImageWrapper>
+                <img src={images[1].src} alt={images[1].alt} />
+              </ImageWrapper>
+              <ImageWrapper>
+                <img src={images[2].src} alt={images[2].alt} />
+              </ImageWrapper>
+            </AdditionalImages>
+            <h4>Technical Challenges</h4>
+            {technicalChallenges}
+            <h4>Summary</h4>
+            {summary}
+          </Wrapper>
+        </Box>
+      </main>
+      <Footer />
+    </>
   );
 }
