@@ -1,7 +1,5 @@
 import React from "react"; // eslint-disable-line no-use-before-define
-import styled from "styled-components";
-import { Box } from "../../components/Box";
-import { ButtonLink } from "../../components/ButtonLink";
+import { Layout } from "../../components/ProjectLayout";
 import { ProjectMetadata } from "../../global";
 
 export const metadata: Omit<ProjectMetadata, "slug"> = {
@@ -11,128 +9,7 @@ export const metadata: Omit<ProjectMetadata, "slug"> = {
   tech: "Typescript, React, Next.js, Styled Components",
 };
 
-const Wrapper = styled.section`
-  h2 {
-    /* text-align: center; */
-    margin-bottom: 16px;
-    margin-top: 16px;
-    font-weight: var(--font-weight-regular);
-  }
-
-  h4 {
-    margin: 16px 0;
-    font-weight: var(--font-weight-regular);
-  }
-
-  h5 {
-    margin: 8px 0;
-  }
-`;
-
-const LinkWrapper = styled.div`
-  display: flex;
-  gap: 16px;
-`;
-
-const MainImage = styled.img`
-  display: block;
-  width: 100%;
-  height: auto;
-  box-shadow: var(--shadow);
-  margin: 64px 0;
-`;
-
-const AdditionalImages = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 48px;
-`;
-
-const ImageWrapper = styled.div`
-  flex: 1 1 50%;
-
-  img {
-    width: 100%;
-    height: auto;
-    box-shadow: var(--shadow);
-  }
-`;
-
-interface LayoutProps {
-  technicalChallenges: React.ReactNode;
-}
-
-function Layout({ technicalChallenges }: LayoutProps) {
-  return (
-    <main>
-      <Box maxWidth={1200} gutter={96}>
-        <Wrapper>
-          <h2>{metadata.title}</h2>
-          <p>{metadata.description}</p>
-          <LinkWrapper>
-            <ButtonLink
-              variant="outline"
-              size="medium"
-              href="https://github.com/macolby14/jogging-beats"
-            >
-              Repository
-            </ButtonLink>
-            <ButtonLink
-              variant="outline"
-              size="medium"
-              href="https://joggingbeats.com"
-            >
-              Live Site
-            </ButtonLink>
-          </LinkWrapper>
-          <h4>Tech Used</h4>
-          <p>{metadata.tech}</p>
-          <MainImage src="/Home_Screenshot.jpg" alt="" />
-          <h4>Project Motivation</h4>
-          <p>
-            I love listening to music when I run. Listening to the right music
-            really helps me hold a pace and run faster. If I just listen to a
-            random playlist, the song’s tempos can change and negatively affect
-            my running... I’ll be hitting my stride and a slower song will come
-            on, messing up my pace.
-          </p>
-          <p>
-            I built this site using the Spotify API to allow a user to create
-            workout playlists where all the songs are at the same tempo. The
-            user can generate a playlist, switch out songs they do not like,
-            then login to their Spotify to save the playlist.
-          </p>
-          <AdditionalImages>
-            <ImageWrapper>
-              <img
-                src="/joggingbeats/Selection_Screenshot.jpg"
-                alt="Selection Screenshot"
-              />
-            </ImageWrapper>
-            <ImageWrapper>
-              <img
-                src="/joggingbeats/Confirmation_Screenshot.jpg"
-                alt="Confirmation Screenshot"
-              />
-            </ImageWrapper>
-          </AdditionalImages>
-          <h4>Technical Challenges</h4>
-          {technicalChallenges}
-          <h4>Summary</h4>
-          <p>
-            I have been using Jogging Beats on my runs and find it great for
-            finding new music to run to. I plan on continue improving this site
-            to make it more useful for my future runs.
-          </p>
-        </Wrapper>
-      </Box>
-    </main>
-  );
-}
-
-const technicalChallengesProp = (
+const technicalChallenges = (
   <>
     <h5>Authentication and Authorization</h5>
     <p>
@@ -158,6 +35,54 @@ const technicalChallengesProp = (
   </>
 );
 
+const motivation = (
+  <>
+    <p>
+      I love listening to music when I run. Listening to the right music really
+      helps me hold a pace and run faster. If I just listen to a random
+      playlist, the song’s tempos can change and negatively affect my running...
+      I’ll be hitting my stride and a slower song will come on, messing up my
+      pace.
+    </p>
+    <p>
+      I built this site using the Spotify API to allow a user to create workout
+      playlists where all the songs are at the same tempo. The user can generate
+      a playlist, switch out songs they do not like, then login to their Spotify
+      to save the playlist.
+    </p>
+  </>
+);
+
+const summary = (
+  <>
+    <p>
+      I have been using Jogging Beats on my runs and find it great for finding
+      new music to run to. I plan on continue improving this site to make it
+      more useful for my future runs.
+    </p>
+  </>
+);
+
+const links = {
+  liveUrl: "https://joggingbeats.com",
+  codeUrl: "https://github.com/macolby14/jogging-beats",
+};
+
+const images = [
+  { src: "/joggingbeats/home.jpg", alt: "Home Page Screenshot" },
+  { src: "/joggingbeats/confirmation.jpg", alt: "Confirmation Screenshot" },
+  { src: "/joggingbeats/selection.jpg", alt: "Selection Screenshot" },
+];
+
 export default function JoggingBeats() {
-  return <Layout technicalChallenges={technicalChallengesProp} />;
+  return (
+    <Layout
+      metadata={metadata}
+      technicalChallenges={technicalChallenges}
+      motivation={motivation}
+      summary={summary}
+      links={links}
+      images={images}
+    />
+  );
 }
