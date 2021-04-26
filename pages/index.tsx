@@ -6,6 +6,7 @@ import { Box } from "../components/Box";
 import { Intro } from "../components/Intro";
 import { Projects } from "../components/Projects";
 import { ProjectMetadata } from "../types";
+import { Nav } from "../components/Nav";
 
 interface Props {
   projectsMeta: ProjectMetadata[];
@@ -19,6 +20,7 @@ export default function Home({ projectsMeta }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Intro />
+      <Nav />
       <main>
         <Box maxWidth={1600} gutter={32}>
           <About />
