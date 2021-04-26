@@ -13,7 +13,7 @@ interface Props {
 
 export default function Home({ projectsMeta }: Props) {
   return (
-    <div>
+    <>
       <Head>
         <title>Mark Colby - Programmer</title>
         <link rel="icon" href="/favicon.ico" />
@@ -29,7 +29,7 @@ export default function Home({ projectsMeta }: Props) {
       <footer>
         <p>Footer</p>
       </footer>
-    </div>
+    </>
   );
 }
 
