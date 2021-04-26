@@ -9,6 +9,24 @@ export const metadata: Omit<ProjectMetadata, "slug"> = {
   tech: "Typescript, React, Next.js, Styled Components",
 };
 
+const motivation = (
+  <>
+    <p>
+      I love listening to music when I run. Listening to the right music really
+      helps me hold a pace and run faster. If I just listen to a random
+      playlist, the song’s tempos can change and negatively affect my running...
+      I’ll be hitting my stride and a slower song will come on, messing up my
+      pace.
+    </p>
+    <p>
+      I built this site using the Spotify API to allow a user to create workout
+      playlists where all the songs are at the same tempo. The user can generate
+      a playlist, switch out songs they do not like, then login to their Spotify
+      to save the playlist.
+    </p>
+  </>
+);
+
 const technicalChallenges = (
   <>
     <h5>Authentication and Authorization</h5>
@@ -31,24 +49,6 @@ const technicalChallenges = (
       easy to apply styles with React components and I enjoyed the ability to
       pass variables to the components to customize the styles and not having to
       worry about CSS specificity.
-    </p>
-  </>
-);
-
-const motivation = (
-  <>
-    <p>
-      I love listening to music when I run. Listening to the right music really
-      helps me hold a pace and run faster. If I just listen to a random
-      playlist, the song’s tempos can change and negatively affect my running...
-      I’ll be hitting my stride and a slower song will come on, messing up my
-      pace.
-    </p>
-    <p>
-      I built this site using the Spotify API to allow a user to create workout
-      playlists where all the songs are at the same tempo. The user can generate
-      a playlist, switch out songs they do not like, then login to their Spotify
-      to save the playlist.
     </p>
   </>
 );
