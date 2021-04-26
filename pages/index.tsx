@@ -7,6 +7,7 @@ import { Intro } from "../components/Intro";
 import { Projects } from "../components/Projects";
 import { ProjectMetadata } from "../types";
 import { Nav } from "../components/Nav";
+import { Footer } from "../components/Footer";
 
 interface Props {
   projectsMeta: ProjectMetadata[];
@@ -27,10 +28,7 @@ export default function Home({ projectsMeta }: Props) {
           <Projects projects={projectsMeta} />
         </Box>
       </main>
-
-      <footer>
-        <p>Footer</p>
-      </footer>
+      <Footer />
     </>
   );
 }
