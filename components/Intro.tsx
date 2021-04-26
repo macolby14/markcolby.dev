@@ -8,6 +8,7 @@ const LinkBreak = styled.div`
   display: flex;
   align-items: center;
   margin-top: 24px;
+  margin-bottom: 100px;
   margin-left: var(--line-margin-left);
   max-width: 600px;
   i {

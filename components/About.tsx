@@ -3,6 +3,7 @@ import { Box } from "./Box";
 
 const Wrapper = styled.section`
   margin-top: 32px;
+  margin-bottom: 100px;
   h2 {
     margin-bottom: 16px;
   }
