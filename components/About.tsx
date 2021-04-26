@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { Box } from "./Box";
 
 const Wrapper = styled.section`
-  margin-top: 32px;
-  margin-bottom: 100px;
+  padding-top: 50px; //add padding to top to allow navigation anchor to go to section without covering
   h2 {
     margin-bottom: 16px;
   }
@@ -14,7 +13,7 @@ const Wrapper = styled.section`
 
 export function About() {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Box maxWidth={1200} gutter={96}>
         <h2>About me</h2>
         <p>Hey! I’m Mark, a software engineer who loves full-stack web tech.</p>

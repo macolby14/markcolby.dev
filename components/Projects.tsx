@@ -4,6 +4,7 @@ import { Box } from "./Box";
 import { Project } from "./Project";
 
 const Wrapper = styled.section`
+  padding-top: 50px;
   h2 {
     margin-bottom: 16px;
   }
@@ -19,7 +20,7 @@ interface Props {
 
 export function Projects({ projects }: Props) {
   return (
-    <Wrapper>
+    <Wrapper id="projects">
       <Box maxWidth={1200} gutter={96}>
         <h2>Projects</h2>
         {projects.map(({ title, description, slug, tech, previewImg }) => (

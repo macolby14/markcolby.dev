@@ -45,7 +45,7 @@ const Line = styled.hr<{ growRatio: number }>`
 
 export function Intro() {
   return (
-    <Wrapper>
+    <Wrapper id="intro">
       <StyledBox maxWidth={1000} gutter={96}>
         <h1>Hi, I&apos;m Mark</h1>
         <h4>Code Enthusiast</h4>
