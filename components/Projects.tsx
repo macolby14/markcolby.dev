@@ -21,7 +21,7 @@ interface Props {
 export function Projects({ projects }: Props) {
   return (
     <Wrapper id="projects">
-      <Box maxWidth={1200} gutter={96}>
+      <Box maxWidth={1200} gutter={96} mobileGutter={0}>
         <h2>Projects</h2>
         {projects.map(({ title, description, slug, tech, previewImg }) => (
           <StyledProject
