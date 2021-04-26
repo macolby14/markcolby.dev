@@ -64,6 +64,8 @@ table {
   --font-weight-medium: 500;
   --font-weight-bold: 700;
   --color-primary: blue;
+  --color-black: hsl(0deg,0%,10%);
+  --color-white: hsl(0deg,0%,100%);
 
   // Typography scale is from https://material.io/design/typography/the-type-system.html#type-scale
   --font-size-1: 6rem;
