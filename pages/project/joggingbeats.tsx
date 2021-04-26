@@ -7,7 +7,7 @@ import { ProjectMetadata } from "../../global";
 export const metadata: Omit<ProjectMetadata, "slug"> = {
   title: "Jogging Beats",
   description:
-    "Jogging Beats is a web application I built to help runners create workout playlists. It is a site that integrates with the Spotify API to allow a user to easily generate new playlists with songs all at the same tempo.",
+    "Jogging Beats is a web application I built to help create running playlists. It integrates with the Spotify API to allow a user to generate and edit playlists with songs all at the same tempo and add them to the user’s Spotify account.",
   tech: "Typescript, React, Next.js, Styled Components",
 };
 
@@ -94,17 +94,15 @@ function Layout({ technicalChallenges }: LayoutProps) {
           <p>
             I love listening to music when I run. Listening to the right music
             really helps me hold a pace and run faster. If I just listen to a
-            random playlist, I encounter the problem where the song&apos;s tempo
-            will change and affect my running... I&apos;ll be picking up the
-            pace and a slower song will come on and kill my tempo.
+            random playlist, the song’s tempos can change and negatively affect
+            my running... I’ll be hitting my stride and a slower song will come
+            on, messing up my pace.
           </p>
           <p>
-            The Spotify API allows you to get song recommendations with the
-            target tempo (beats per minute) as a constraint. I built this site
-            to allow create random playlists where all the songs are at the same
-            tempo. Not only does this allow me to create new playlists at a
-            certain, it allow&apos; to easily create <em>new</em> playlists each
-            run, so I&apos; always listening to different music.
+            I built this site using the Spotify API to allow a user to create
+            workout playlists where all the songs are at the same tempo. The
+            user can generate a playlist, switch out songs they do not like,
+            then login to their Spotify to save the playlist.
           </p>
           <AdditionalImages>
             <ImageWrapper>
@@ -122,16 +120,11 @@ function Layout({ technicalChallenges }: LayoutProps) {
           </AdditionalImages>
           <h4>Technical Challenges</h4>
           {technicalChallenges}
-          <h4>Lessons Learned</h4>
+          <h4>Summary</h4>
           <p>
-            I learned a lot about server side rendering, authorization and
-            authentication, and styled components for this project. Although I
-            will probably reach for a service or tool like Auth0 or Next-Auth to
-            help make it authorization easier in the future, I learned a lot by
-            diving into the different auth flows and the use cases for them. I
-            also feel a lot more confident with writing plain CSS after using
-            styled-components. Overall, it was a great project and I am enjoying
-            using it to create playlists when I run.
+            I have been using Jogging Beats on my runs and find it great for
+            finding new music to run to. I plan on continue improving this site
+            to make it more useful for my future runs.
           </p>
         </Wrapper>
       </Box>
@@ -141,24 +134,26 @@ function Layout({ technicalChallenges }: LayoutProps) {
 
 const technicalChallengesProp = (
   <>
-    <h5>Authorization</h5>
+    <h5>Authentication and Authorization</h5>
     <p>
-      I learned a lot about authorization during this project. I needed to use
-      OAuth for the user&apos;s Spotify account to allow them to be able to save
-      the playlists to their Spotify account. Luckily, Spotify has great{" "}
-      <a href="https://developer.spotify.com/documentation/general/guides/authorization-guide/">
-        API documentation about this.
-      </a>
-      I use two different types of Authorization flows on the site, server side
-      authorization code flow with Jogging Beat&apos;s Client credentials to
-      allow user&apos;s to generate playlist without logging in and Implicit
-      Grant Authorization flow to allow the user to give Jogging Beats
-      permission to save new playlists on their Spotify account (I would use
-      PKCE flow in the future for additional security). For the server side
-      authorization code, I used Next.js serverless functions via API routes to
-      store my client secrets. The Next.js API routes were very intuitive and I
-      definitely plan on using them again for projects with limited server-side
-      work.
+      I learned a lot about the different authorization flows and OAuth during
+      this project. I used two different authorizations flows for this project:
+      the Client Credentials Flow and the Implicit Grant flow. For the Client
+      Credentials Flow, I used the Next API routes (serverless functions) to
+      protect my app’s Spotify secret and obtain a Spotify API access token.
+      This allows a user to use Jogging Beats to do everything except saving
+      playlists, without logging into Spotify. The second flow, the Implicit
+      Grant flow, allows the User to authorize Jogging Beats to save the
+      playlists they generate to their personal Spotify account.
+    </p>
+    <h5>Styled Components and Custom CSS</h5>
+    <p>
+      This was the most vanilla CSS I had written for a project, and I learned a
+      lot. I got a lot of practical experience with flexbox and grid, CSS
+      variables, media queries, and vanilla styling. Styled components made it
+      easy to apply styles with React components and I enjoyed the ability to
+      pass variables to the components to customize the styles and not having to
+      worry about CSS specificity.
     </p>
   </>
 );
