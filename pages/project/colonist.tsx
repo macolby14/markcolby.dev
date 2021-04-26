@@ -1,4 +1,6 @@
 import React from "react"; // eslint-disable-line no-use-before-define
+import styled from "styled-components";
+import { ButtonLink } from "../../components/ButtonLink";
 import { Layout } from "../../components/ProjectLayout";
 import { ProjectMetadata } from "../../types";
 
@@ -66,6 +68,28 @@ const links = {
   codeUrl: "",
 };
 
+const LinkWrapper = styled.div`
+  display: flex;
+  gap: 16px;
+`;
+
+const customButtons = (
+  <LinkWrapper>
+    <ButtonLink variant="outline" size="medium" href={links.liveUrl}>
+      Live Site
+    </ButtonLink>
+    <ButtonLink
+      variant="outline"
+      size="medium"
+      href="https://colonist.io/patchnotes.html"
+    >
+      Patch Notes
+      <br />
+      (search for macolby14)
+    </ButtonLink>
+  </LinkWrapper>
+);
+
 const images = [
   metadata.previewImg,
   {
@@ -87,6 +111,7 @@ export default function Colonist() {
       summary={summary}
       links={links}
       images={images}
+      customButtons={customButtons}
     />
   );
 }

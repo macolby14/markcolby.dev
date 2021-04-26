@@ -46,6 +46,9 @@ const ButtonBase = styled.a<{ style: any }>`
   border-radius: var(--borderRadius);
   border: 2px solid transparent;
   outline-color: ${COLORS.primary};
+  display: grid;
+  place-items: center;
+  text-align: center;
 
   &:focus {
     outline-offset: 4px;

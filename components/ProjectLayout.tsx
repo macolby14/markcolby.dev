@@ -67,6 +67,7 @@ interface LayoutProps {
     liveUrl: string;
     codeUrl: string;
   };
+  customButtons?: React.ReactNode;
   images: ImageInfo[];
 }
 
@@ -77,25 +78,31 @@ export function Layout({
   summary,
   links: { liveUrl, codeUrl },
   images,
+  customButtons = null,
 }: LayoutProps) {
   if (!images || images.length !== 3) {
     // eslint-disable-next-line no-console
     console.warn("Wrong number of images used in a Project Layout");
   }
+
+  const buttonComponent = customButtons ?? (
+    <LinkWrapper>
+      <ButtonLink variant="outline" size="medium" href={liveUrl}>
+        Live Site
+      </ButtonLink>
+      <ButtonLink variant="outline" size="medium" href={codeUrl}>
+        Repository
+      </ButtonLink>
+    </LinkWrapper>
+  );
+
   return (
     <main>
       <Box maxWidth={1200} gutter={96} mobileGutter={16}>
         <Wrapper>
           <h2>{metadata.title}</h2>
           <p>{metadata.description}</p>
-          <LinkWrapper>
-            <ButtonLink variant="outline" size="medium" href={liveUrl}>
-              Live Site
-            </ButtonLink>
-            <ButtonLink variant="outline" size="medium" href={codeUrl}>
-              Repository
-            </ButtonLink>
-          </LinkWrapper>
+          {buttonComponent}
           <h4>Tech Used</h4>
           <p>{metadata.tech}</p>
           <MainImage src={images[0].src} alt={images[0].alt} />
