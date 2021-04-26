@@ -27,9 +27,9 @@ export function About() {
         <p>
           I joined the Navy after college and got to see the world on a
           submarine. Kind of. Actually, I couldn’t really see much most the time
-          because we were underwater… But I really, enjoyed my time working in
-          both the engine room and in control, and I think submarines are
-          awesome pieces of technology!
+          because we were underwater… But I really enjoyed my time working in
+          both the engine room and in the control room, and I think submarines
+          are awesome pieces of technology!
         </p>
         <p>
           I’m currently stationed in Hawaii, preparing to transition to my first

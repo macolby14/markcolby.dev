@@ -30,7 +30,7 @@ const technicalChallenges = (
       This was the first real project I was working on with others, so I learned
       a lot about Git, collaboration, and code reviews. I used Github to assign
       myself issues, to submit pull requests, and to receive feedback. Although
-      I had used Git in the passed for personal projects, things like branches,
+      I had used Git in the past for personal projects, things like branches,
       rebasing, and merging made more sense after having practical experience.
     </p>
     <h5>Docker</h5>
@@ -43,7 +43,7 @@ const technicalChallenges = (
     <h5>Testing</h5>
     <p>
       This was my first real experience with automated testing; tests were
-      created with Mocha.js. I created tests for all of the pull request I
+      created with Mocha.js. I created tests for all of the pull requests I
       submitted and utilized existing tests to ensure I wasn’t breaking any of
       the existing code base.
     </p>
@@ -56,7 +56,7 @@ const summary = (
       I learned a lot working with the professional colonist.io team (they are a
       small business). If anyone is getting into coding, the Colonist.io team is
       often looking for talented fan contributors or new employees. The site is
-      also a great for spending time if you’re a fan of Settlers of Catan!
+      also great for spending time if you’re a fan of Settlers of Catan!
     </p>
   </>
 );

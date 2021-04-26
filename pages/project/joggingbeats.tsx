@@ -37,19 +37,18 @@ const technicalChallenges = (
       the Client Credentials Flow and the Implicit Grant flow. For the Client
       Credentials Flow, I used the Next API routes (serverless functions) to
       protect my app’s Spotify secret and obtain a Spotify API access token.
-      This allows a user to use Jogging Beats to do everything except saving
-      playlists, without logging into Spotify. The second flow, the Implicit
-      Grant flow, allows the User to authorize Jogging Beats to save the
-      playlists they generate to their personal Spotify account.
+      This allows a user to utilize all the features of Jogging Beats, except
+      saving playlists to their Spotify account, without logging in. The second
+      flow, the Implicit Grant flow, allows the user to authorize Jogging Beats
+      to save the playlists they generate to their personal Spotify account.
     </p>
     <h5>Styled Components and Custom CSS</h5>
     <p>
       This was the most vanilla CSS I had written for a project, and I learned a
       lot. I got a lot of practical experience with flexbox and grid, CSS
       variables, media queries, and vanilla styling. Styled components made it
-      easy to apply styles with React components and I enjoyed the ability to
-      pass variables to the components to customize the styles and not having to
-      worry about CSS specificity.
+      easy to apply styles to my React components; I particularly enjoyed the
+      ability to target components’ styles without worrying about specificity.
     </p>
   </>
 );
