@@ -84,7 +84,7 @@ export function Layout({
   }
   return (
     <main>
-      <Box maxWidth={1200} gutter={96}>
+      <Box maxWidth={1200} gutter={96} mobileGutter={16}>
         <Wrapper>
           <h2>{metadata.title}</h2>
           <p>{metadata.description}</p>
