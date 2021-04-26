@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -16,9 +17,9 @@ const List = styled.ul`
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-5);
-  a {
-    color: inherit;
-    text-decoration: none;
+
+  li:hover {
+    cursor: pointer;
   }
 
   li:not(:last-child)::after {
@@ -33,13 +34,19 @@ export function Nav() {
     <Wrapper>
       <List>
         <li>
-          <a href="#intro">Intro</a>
+          <Link to="intro" spy smooth duration={500}>
+            Intro
+          </Link>
         </li>
         <li>
-          <a href="#about">About</a>
+          <Link to="about" spy smooth duration={500}>
+            About
+          </Link>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <Link to="projects" spy smooth duration={500}>
+            Projects
+          </Link>
         </li>
       </List>
     </Wrapper>
