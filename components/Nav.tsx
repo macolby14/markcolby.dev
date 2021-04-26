@@ -13,6 +13,10 @@ const Wrapper = styled.nav`
 `;
 
 const List = styled.ul`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   height: 100%;
   display: flex;
   align-items: center;
@@ -65,7 +69,7 @@ export function ProjectNav() {
       <List>
         <li>
           <Link href="/#intro">
-            <a>Home</a>
+            <a>Intro</a>
           </Link>
         </li>
         <li>
