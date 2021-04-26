@@ -22,7 +22,7 @@ export default function Home({ projectsMeta }: Props) {
       <Intro />
       <Nav />
       <main>
-        <Box maxWidth={1600} gutter={32}>
+        <Box maxWidth={1600} gutter={32} mobileGutter={16}>
           <About />
           <Projects projects={projectsMeta} />
         </Box>

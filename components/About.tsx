@@ -14,7 +14,7 @@ const Wrapper = styled.section`
 export function About() {
   return (
     <Wrapper id="about">
-      <Box maxWidth={1200} gutter={96}>
+      <Box maxWidth={1200} gutter={96} mobileGutter={16}>
         <h2>About me</h2>
         <p>Hey! I’m Mark, a software engineer who loves full-stack web tech.</p>
         <p>
