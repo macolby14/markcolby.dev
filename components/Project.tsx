@@ -59,6 +59,31 @@ const StyledLink = styled.a`
   color: inherit;
 `;
 
+const ReadMoreStyle = styled.div`
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: 0;
+    margin-right: 8px;
+  }
+
+  svg {
+    margin-top: 4px;
+  }
+
+  svg path {
+    opacity: 0;
+    transition: opacity 1000ms ease;
+  }
+
+  ${Wrapper}:hover & {
+    svg path {
+      opacity: 1;
+    }
+  }
+`;
+
 interface Props extends ProjectMetadata {
   className?: string;
 }
@@ -83,6 +108,40 @@ export function Project({
               <h3>{title}</h3>
               <p>{description}</p>
               <p>Tech Used: {tech}</p>
+              <ReadMoreStyle>
+                <p>Read More</p>
+                <svg width="36" height="12" viewBox="0 0 36 12" fill="none">
+                  <path
+                    d="M0.75 6H11.25 M6 0.75L11.25 6L6 11.25"
+                    stroke="black"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    style={{
+                      opacity: "1",
+                    }}
+                  />
+                  <path
+                    d="M15 10L19.5 5.5L15 1"
+                    stroke="black"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M23 10L27.5 5.5L23 1"
+                    stroke="black"
+                    strokeOpacity="0.66"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M31 10L35.5 5.5L31 1"
+                    stroke="black"
+                    strokeOpacity="0.35"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </ReadMoreStyle>
             </ProjectDescription>
           </FlexWrapper>
         </StyledLink>
