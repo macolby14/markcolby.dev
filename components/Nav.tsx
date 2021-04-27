@@ -30,13 +30,22 @@ const List = styled.ul`
 
   li:hover {
     cursor: pointer;
+    transform: translateY(-4px);
   }
 
-  li:not(:last-child)::after {
+  li:hover:after {
+    transform: 0;
+  }
+
+  /* li:not(:last-child)::after {
     content: "/";
     margin-left: 16px;
     margin-right: 16px;
-  }
+  } */
+`;
+
+const Separator = styled.span`
+  margin: 0 16px;
 `;
 
 export function Nav() {
@@ -48,11 +57,13 @@ export function Nav() {
             Intro
           </ScrollLink>
         </li>
+        <Separator>/</Separator>
         <li>
           <ScrollLink to="about" spy smooth duration={500}>
             About
           </ScrollLink>
         </li>
+        <Separator>/</Separator>
         <li>
           <ScrollLink to="projects" spy smooth duration={500}>
             Projects
@@ -72,9 +83,11 @@ export function ProjectNav() {
             <a>Intro</a>
           </Link>
         </li>
+        <Separator>/</Separator>
         <li>
           <Link href="/#about">About</Link>
         </li>
+        <Separator>/</Separator>
         <li>
           <Link href="/#projects">Projects</Link>
         </li>
