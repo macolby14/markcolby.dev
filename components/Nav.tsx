@@ -36,12 +36,6 @@ const List = styled.ul`
   li:hover:after {
     transform: 0;
   }
-
-  /* li:not(:last-child)::after {
-    content: "/";
-    margin-left: 16px;
-    margin-right: 16px;
-  } */
 `;
 
 const Separator = styled.span`
@@ -80,7 +74,7 @@ export function ProjectNav() {
       <List>
         <li>
           <Link href="/#intro">
-            <a>Intro</a>
+            <a>Home</a>
           </Link>
         </li>
         <Separator>/</Separator>
