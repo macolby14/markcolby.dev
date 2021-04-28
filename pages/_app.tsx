@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Mark Colby - Programmer</title>
+        <title>Mark Colby</title>
         <link rel="icon" href="/favicon.svg" />
         <link rel="mask-icon" href="/favicon.svg" color="#000000" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
