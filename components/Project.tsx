@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { ProjectMetadata } from "../types";
+import { TechIcons } from "./TechIcons";
 
 const Wrapper = styled.article``;
 
@@ -107,7 +108,7 @@ export function Project({
             <ProjectDescription>
               <h3>{title}</h3>
               <p>{description}</p>
-              <p>Tech Used: {tech}</p>
+              <TechIcons tech={tech} />
               <ReadMoreStyle>
                 <p>Read More</p>
                 <svg width="36" height="12" viewBox="0 0 36 12" fill="none">
