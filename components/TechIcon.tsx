@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TechData } from "../types";
 
 const Wrapper = styled.figure`
   display: flex;
@@ -15,15 +16,19 @@ const Wrapper = styled.figure`
 `;
 
 interface Props {
-  name: string;
-  iconLink: string;
+  tech: TechData;
 }
 
-export function TechIcon({ name, iconLink }: Props) {
+export function TechIcon({ tech }: Props) {
   return (
     <Wrapper>
-      <img src={iconLink} alt={`${name} Icon`} width="32px" height="auto" />
-      <figcaption>{name}</figcaption>
+      <img
+        src={tech.src}
+        alt={`${tech.name} Icon`}
+        width="32px"
+        height="auto"
+      />
+      <figcaption>{tech.name}</figcaption>
     </Wrapper>
   );
 }
