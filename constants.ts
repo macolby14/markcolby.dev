@@ -3,6 +3,10 @@ export const TECH = {
     src: "/icons/docker.svg",
     name: "Docker",
   },
+  git: {
+    src: "",
+    name: "Git",
+  },
   javascript: {
     src: "",
     name: "JavaScript",
@@ -10,6 +14,10 @@ export const TECH = {
   mocha: {
     src: "/icons/mocha.svg",
     name: "Mocha",
+  },
+  mongoDB: {
+    src: "",
+    name: "MonogoDB",
   },
   next: {
     src: "/icons/nextjs.svg",
