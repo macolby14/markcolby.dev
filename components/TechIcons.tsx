@@ -1,4 +1,12 @@
+import styled from "styled-components";
 import { TechIcon } from "./TechIcon";
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+`;
 
 interface Props {
   tech: string;
@@ -6,7 +14,7 @@ interface Props {
 
 export function TechIcons({ tech }: Props) {
   return (
-    <>
+    <Wrapper>
       <TechIcon iconLink="/icons/react.svg" name="React" />
       <TechIcon iconLink="/icons/docker.svg" name="Docker" />
       <TechIcon iconLink="/icons/mocha.svg" name="Mocha" />
@@ -17,6 +25,6 @@ export function TechIcons({ tech }: Props) {
         name="styled components"
       />
       <TechIcon iconLink="/icons/typescript.svg" name="Typescript" />
-    </>
+    </Wrapper>
   );
 }

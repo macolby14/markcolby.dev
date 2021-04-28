@@ -7,7 +7,6 @@ const Wrapper = styled.figure`
   width: fit-content;
   padding: 4px 8px;
   gap: 4px;
-  margin-bottom: 8px;
 
   figcaption {
     font-size: var(--font-size-5);
