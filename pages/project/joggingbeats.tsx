@@ -1,14 +1,12 @@
 import React from "react"; // eslint-disable-line no-use-before-define
 import { Layout } from "../../components/ProjectLayout";
-import { TECH } from "../../constants";
 import { ProjectMetadata } from "../../types";
 
 export const metadata: Omit<ProjectMetadata, "slug"> = {
   title: "Jogging Beats",
   description:
     "Jogging Beats is a web application I built to help create running playlists. It integrates with the Spotify API to allow a user to generate and edit playlists with songs all at the same tempo and add them to the user’s Spotify account.",
-  tech: [TECH.typescript, TECH.react, TECH.next, TECH.styledComponents],
-  // tech: "Typescript, React, Next.js, Styled Components",
+  tech: ["typescript", "react", "next", "styledComponents"],
   previewImg: { src: "/joggingbeats/home.jpg", alt: "Home Page Screenshot" },
 };
 

@@ -1,16 +1,4 @@
-import { TechData } from "./types";
-
-type TechName =
-  | "docker"
-  | "javascript"
-  | "mocha"
-  | "next"
-  | "node"
-  | "react"
-  | "styledComponents"
-  | "typescript";
-
-export const TECH: Record<TechName, TechData> = {
+export const TECH = {
   docker: {
     src: "/icons/docker.svg",
     name: "Docker",
