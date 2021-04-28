@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import Head from "next/head";
 import { About } from "../components/About";
 import { Box } from "../components/Box";
 import { Intro } from "../components/Intro";

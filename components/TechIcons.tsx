@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TechData } from "../types";
 import { TechIcon } from "./TechIcon";
 
 const Wrapper = styled.div`
@@ -9,7 +10,7 @@ const Wrapper = styled.div`
 `;
 
 interface Props {
-  tech: string;
+  tech: TechData;
 }
 
 export function TechIcons({ tech }: Props) {
