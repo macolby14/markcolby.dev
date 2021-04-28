@@ -5,6 +5,7 @@ import { Box } from "./Box";
 import { ButtonLink } from "./ButtonLink";
 import { Footer } from "./Footer";
 import { ProjectNav } from "./Nav";
+import { TechIcons } from "./TechIcons";
 
 const Wrapper = styled.section`
   h2 {
@@ -108,7 +109,8 @@ export function Layout({
             <p>{metadata.description}</p>
             {buttonComponent}
             <h4>Tech Used</h4>
-            <p>{metadata.tech}</p>
+            <TechIcons tech={metadata.tech} />
+            {/* <p>{metadata.tech}</p> */}
             <MainImage src={images[0].src} alt={images[0].alt} />
             <h4>Project Motivation</h4>
             {motivation}
