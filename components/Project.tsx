@@ -46,7 +46,6 @@ const ProjectDescription = styled.div`
   padding: 0 16px;
 
   p {
-    margin-bottom: 16px;
     font-size: var(--font-size-6);
     font-weight: var(--font-weight-regular);
   }
