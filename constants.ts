@@ -4,11 +4,11 @@ export const TECH = {
     name: "Docker",
   },
   git: {
-    src: "",
+    src: "/icons/git.svg",
     name: "Git",
   },
   javascript: {
-    src: "",
+    src: "/icons/javascript.svg",
     name: "JavaScript",
   },
   mocha: {
@@ -16,7 +16,7 @@ export const TECH = {
     name: "Mocha",
   },
   mongoDB: {
-    src: "",
+    src: "/icons/mongo.svg",
     name: "MonogoDB",
   },
   next: {

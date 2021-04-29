@@ -25,8 +25,8 @@ export function TechIcon({ tech }: Props) {
       <img
         src={tech.src}
         alt={`${tech.name} Icon`}
-        width="32px"
-        height="auto"
+        height="32px"
+        width="auto"
       />
       <figcaption>{tech.name}</figcaption>
     </Wrapper>
