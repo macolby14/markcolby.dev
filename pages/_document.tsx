@@ -37,13 +37,27 @@ export default class MyDocument extends Document {
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width" />
           <title>Mark Colby</title>
+          <meta
+            name="description"
+            content="Personal website for Mark Colby, a software engineer and submarine veteran who loves full-stack web tech. Checkout the latest things I've been working on!"
+          />
+          <meta property="og:title" content="Mark Colby" key="title" />
+          <meta
+            property="og:description"
+            content="Personal website for Mark Colby, a software engineer and submarine veteran who loves full-stack web tech. Checkout the latest things I've been working on!"
+          />
+          <meta property="og:image" content="/markcolby_ogImage.jpg" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://markcolby.dev" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <link rel="icon" href="/favicon.svg" />
+          <link rel="mask-icon" href="/favicon.svg" color="#000000" />
+          <link rel="apple-touch-icon" href="/favicon.svg" />
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
           />
-          <link rel="icon" href="/favicon.svg" />
-          <link rel="mask-icon" href="/favicon.svg" color="#000000" />
-          <link rel="apple-touch-icon" href="/favicon.svg" />
         </Head>
         <body>
           <Main />

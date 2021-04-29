@@ -104,6 +104,11 @@ export function Layout({
     <>
       <Head>
         <title> {metadata.title} • Mark Colby</title>
+        <meta
+          property="og:title"
+          content={`${metadata.title} • Mark Colby`}
+          key="title"
+        />
       </Head>
       <ProjectNav />
       <main>
