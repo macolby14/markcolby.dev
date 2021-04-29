@@ -6,7 +6,7 @@ export const metadata: Omit<ProjectMetadata, "slug"> = {
   title: "Operation On Track",
   description:
     "Operation On Track is a site that allows military service members to create and track checklists for key events in the military, such as moving or leaving active duty. I created this project with a team of three other veterans during April 2021 at a veterans Hackathon hosted by FallIn.",
-  tech: ["typescript", "react", "mongoDB", "node"],
+  tech: ["javascript", "react", "mongoDB", "node"],
   previewImg: {
     src: "/operationontrack/trackers.jpg",
     alt: "Tracker Page Screenshot",
