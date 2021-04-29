@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react"; // eslint-disable-line no-use-before-define
 import styled from "styled-components";
 import { ProjectMetadata } from "../types";
@@ -101,6 +102,9 @@ export function Layout({
 
   return (
     <>
+      <Head>
+        <title> {metadata.title} • Mark Colby</title>
+      </Head>
       <ProjectNav />
       <main>
         <Box maxWidth={1200} gutter={96} mobileGutter={16}>

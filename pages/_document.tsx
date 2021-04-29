@@ -1,4 +1,5 @@
 import { ServerStyleSheet } from "styled-components";
+
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
@@ -33,10 +34,16 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width" />
+          <title>Mark Colby</title>
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
           />
+          <link rel="icon" href="/favicon.svg" />
+          <link rel="mask-icon" href="/favicon.svg" color="#000000" />
+          <link rel="apple-touch-icon" href="/favicon.svg" />
         </Head>
         <body>
           <Main />
