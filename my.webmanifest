@@ -15,5 +15,6 @@
       "src": "favicon.svg",
       "sizes": "513x513"
     }
-  ]
+  ],
+  "theme_color": "#000"
 }

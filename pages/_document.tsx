@@ -57,7 +57,7 @@ export default class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <link rel="manifest" href="/my.webmanifest" />
           <link rel="canonical" href="https://markcolby.dev" />
-          <meta name="theme-color" content="#b31b1b" />
+          <meta name="theme-color" content="#000" />
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
