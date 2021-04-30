@@ -55,6 +55,7 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
           <link rel="mask-icon" href="/favicon.svg" color="#000" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/my.webmanifest" />
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
