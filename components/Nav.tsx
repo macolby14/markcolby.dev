@@ -53,10 +53,32 @@ function ScrollLink({ to, children }: ScrollLinkProps) {
     const el = document.querySelector<HTMLElement>(to);
     if (!el) {
       console.warn("Invalid element to scroll to"); // eslint-disable-line no-console
+      return;
     }
-    el?.scrollIntoView({
+    el.scrollIntoView({
       behavior: "smooth",
     });
+    el.setAttribute("tabindex", "-1");
+
+    function scrollEnded() {
+      if (!el) {
+        console.warn("Invalid element to scroll to"); // eslint-disable-line no-console
+        return;
+      }
+      el.focus();
+    }
+
+    // Scroll handling - Change focus off of nav bar to remove outline and for accessibility once smooth scroll is over
+    let scrollTimeout: any;
+    const scrollHandler = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        scrollEnded();
+        window.removeEventListener("scroll", scrollHandler);
+      }, 100);
+    };
+
+    window.addEventListener("scroll", scrollHandler);
   }
 
   return (
