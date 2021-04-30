@@ -28,13 +28,15 @@ const List = styled.ul`
     text-decoration: none;
   }
 
-  li:hover {
-    cursor: pointer;
-    transform: translateY(-4px);
-  }
+  @media (hover: hover) {
+    li:hover {
+      cursor: pointer;
+      transform: translateY(-4px);
+    }
 
-  li:hover:after {
-    transform: 0;
+    li:hover:after {
+      transform: 0;
+    }
   }
 `;
 
