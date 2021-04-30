@@ -50,7 +50,7 @@ interface ScrollLinkProps {
 function ScrollLink({ to, children }: ScrollLinkProps) {
   function clickHandler() {
     // TODO: Replace querySelector with React refs
-    const el = document.querySelector(to);
+    const el = document.querySelector<HTMLElement>(to);
     if (!el) {
       console.warn("Invalid element to scroll to"); // eslint-disable-line no-console
     }
@@ -60,7 +60,16 @@ function ScrollLink({ to, children }: ScrollLinkProps) {
   }
 
   return (
-    <a onClick={clickHandler} role="link">
+    <a
+      onClick={clickHandler}
+      onKeyDown={(e: React.KeyboardEvent<HTMLAnchorElement>) => {
+        if (e.key === "Enter") {
+          clickHandler();
+        }
+      }}
+      role="link"
+      tabIndex={0}
+    >
       {children}
     </a>
   );
