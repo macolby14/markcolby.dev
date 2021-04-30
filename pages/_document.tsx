@@ -35,12 +35,14 @@ export default class MyDocument extends Document {
       <Html lang="en-US">
         <Head>
           <meta charSet="UTF-8" />
-          <meta name="viewport" content="width=device-width" />
-          <title>Mark Colby</title>
+          {/* Viewport tag in _app.tsx https://err.sh/next.js/no-document-viewport-meta */}
+          {/* Default title in _app.tsx https://nextjs.org/docs/messages/no-document-title */}
           <meta
             name="description"
             content="Personal website for Mark Colby, a software engineer and submarine veteran who loves full-stack web tech. Checkout the latest things I've been working on!"
           />
+          <meta name="theme-color" content="#000" />
+
           <meta property="og:title" content="Mark Colby" key="title" />
           <meta
             property="og:description"
@@ -51,13 +53,14 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://markcolby.dev" />
           <meta name="twitter:card" content="summary_large_image" />
+
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
           <link rel="mask-icon" href="/favicon.svg" color="#000" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <link rel="manifest" href="/my.webmanifest" />
           <link rel="canonical" href="https://markcolby.dev" />
-          <meta name="theme-color" content="#000" />
+
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
