@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 
 const Wrapper = styled.nav`
@@ -47,21 +46,15 @@ export function Nav() {
     <Wrapper>
       <List>
         <li>
-          <ScrollLink to="intro" spy smooth duration={500}>
-            Intro
-          </ScrollLink>
+          <a href="#intro">Intro</a>
         </li>
         <Separator>/</Separator>
         <li>
-          <ScrollLink to="about" spy smooth duration={500}>
-            About
-          </ScrollLink>
+          <a href="#about">About</a>
         </li>
         <Separator>/</Separator>
         <li>
-          <ScrollLink to="projects" spy smooth duration={500}>
-            Projects
-          </ScrollLink>
+          <a href="#projects">Projects</a>
         </li>
       </List>
     </Wrapper>
