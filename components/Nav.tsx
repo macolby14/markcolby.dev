@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import React from "react"; // eslint-disable-line no-use-before-define
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -41,20 +42,44 @@ const Separator = styled.span`
   margin: 0 16px;
 `;
 
+interface ScrollLinkProps {
+  to: string;
+  children: React.ReactNode;
+}
+
+function ScrollLink({ to, children }: ScrollLinkProps) {
+  function clickHandler() {
+    // TODO: Replace querySelector with React refs
+    const el = document.querySelector(to);
+    if (!el) {
+      console.warn("Invalid element to scroll to"); // eslint-disable-line no-console
+    }
+    el?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
+  return (
+    <a onClick={clickHandler} role="link">
+      {children}
+    </a>
+  );
+}
+
 export function Nav() {
   return (
     <Wrapper>
       <List>
         <li>
-          <a href="#intro">Intro</a>
+          <ScrollLink to="#intro">Intro</ScrollLink>
         </li>
         <Separator>/</Separator>
         <li>
-          <a href="#about">About</a>
+          <ScrollLink to="#about">About</ScrollLink>
         </li>
         <Separator>/</Separator>
         <li>
-          <a href="#projects">Projects</a>
+          <ScrollLink to="#projects">Projects</ScrollLink>
         </li>
       </List>
     </Wrapper>
