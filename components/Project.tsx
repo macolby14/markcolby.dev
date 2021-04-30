@@ -16,9 +16,11 @@ const FlexWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  &:hover {
-    img {
-      padding: 0%;
+  @media (hover: hover) {
+    &:hover {
+      img {
+        padding: 0%;
+      }
     }
   }
 
@@ -78,9 +80,11 @@ const ReadMoreStyle = styled.div`
     transition: opacity 1000ms ease;
   }
 
-  ${Wrapper}:hover & {
-    svg path {
-      opacity: 1;
+  @media (hover: hover) {
+    ${Wrapper}:hover & {
+      svg path {
+        opacity: 1;
+      }
     }
   }
 `;
