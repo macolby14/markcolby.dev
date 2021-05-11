@@ -5,19 +5,9 @@ import styled from "styled-components";
 interface Props {
   children: React.ReactNode;
   href: string;
-  variant: "fill" | "outline" | "ghost";
+  variant: "outline";
   size: "small" | "medium" | "large";
 }
-
-const COLORS = {
-  primary: "black",
-  white: "white",
-  gray: "gray",
-  transparentGray15: "gray",
-  black: "black",
-  offwhite: "white",
-  primaryLight: "white",
-};
 
 const SIZES = {
   small: {
@@ -45,7 +35,7 @@ const ButtonBase = styled.a<{ style: any }>`
   padding: var(--padding);
   border-radius: var(--borderRadius);
   border: 2px solid transparent;
-  outline-color: ${COLORS.primary};
+  outline-color: var(--color-black);
   display: grid;
   place-items: center;
   text-align: center;
@@ -55,31 +45,18 @@ const ButtonBase = styled.a<{ style: any }>`
   }
 `;
 
-const FillButton = styled(ButtonBase)`
-  background-color: ${COLORS.primary};
-  color: ${COLORS.white};
-
-  &:hover {
-    background-color: ${COLORS.primaryLight};
-  }
-`;
 const OutlineButton = styled(ButtonBase)`
-  background-color: ${COLORS.white};
-  color: ${COLORS.primary};
+  background-color: var(--color-white);
+  color: var(--color-black);
   border: 2px solid currentColor;
+  box-shadow: var(--shadow);
 
-  &:hover {
-    background-color: ${COLORS.offwhite};
-  }
-`;
-const GhostButton = styled(ButtonBase)`
-  color: ${COLORS.gray};
-  background-color: transparent;
-  outline-color: ${COLORS.gray};
-
-  &:hover {
-    background: ${COLORS.transparentGray15};
-    color: ${COLORS.black};
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-offwhite);
+      position: relative;
+      top: -4px;
+    }
   }
 `;
 
@@ -87,12 +64,8 @@ export function ButtonLink({ variant, size, href, children }: Props) {
   const styles = SIZES[size];
 
   let Component;
-  if (variant === "fill") {
-    Component = FillButton;
-  } else if (variant === "outline") {
+  if (variant === "outline") {
     Component = OutlineButton;
-  } else if (variant === "ghost") {
-    Component = GhostButton;
   } else {
     throw new Error(`Unrecognized Button variant: ${variant}`);
   }
