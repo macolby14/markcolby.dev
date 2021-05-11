@@ -71,23 +71,33 @@ const links = {
 const LinkWrapper = styled.div`
   display: flex;
   gap: 16px;
+  align-items: center;
+`;
+
+const PatchNotesP = styled.p`
+  margin: 1em 0;
 `;
 
 const customButtons = (
-  <LinkWrapper>
-    <ButtonLink variant="outline" size="medium" href={links.liveUrl}>
-      Live Site
-    </ButtonLink>
-    <ButtonLink
-      variant="outline"
-      size="medium"
-      href="https://colonist.io/patchnotes.html"
-    >
-      Patch Notes
-      <br />
-      (search for macolby14)
-    </ButtonLink>
-  </LinkWrapper>
+  <>
+    <LinkWrapper>
+      <ButtonLink variant="outline" size="medium" href={links.liveUrl}>
+        Live Site
+      </ButtonLink>
+      <ButtonLink
+        variant="outline"
+        size="medium"
+        href="https://colonist.io/patchnotes.html"
+      >
+        Patch Notes
+      </ButtonLink>
+    </LinkWrapper>
+    <PatchNotesP>
+      <em>
+        Note: Search for macolby14 to see my contributions in the Patch Notes
+      </em>
+    </PatchNotesP>
+  </>
 );
 
 const images = [
