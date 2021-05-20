@@ -19,7 +19,7 @@ export function About() {
         <p>Hey! I’m Mark, a software engineer who loves full-stack web tech.</p>
         <p>
           I was first introduced to programming in high school. In my computer
-          science we made games using Java and I was instantly captivated,
+          science class we made games using Java and I was instantly captivated,
           staying up night after night to work on my Bomberman game. The ability
           to turn code into tools that can automate work and organize
           information immediately became my most powerful skill.
