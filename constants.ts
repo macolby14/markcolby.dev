@@ -17,7 +17,7 @@ export const TECH = {
   },
   mongoDB: {
     src: "/icons/mongo.svg",
-    name: "MonogoDB",
+    name: "MongoDB",
   },
   next: {
     src: "/icons/nextjs.svg",
