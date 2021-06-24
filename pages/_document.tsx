@@ -43,12 +43,23 @@ export default class MyDocument extends Document {
           />
           <meta name="theme-color" content="#000" />
 
-          <meta property="og:title" content="Mark Colby" key="title" />
+          <meta
+            property="og:title"
+            content="Mark Colby - Full-Stack Engineer and Navy Vet Portfolio Site"
+            key="title"
+          />
           <meta
             property="og:description"
             content="Personal website for Mark Colby, a software engineer and submarine veteran who loves full-stack web tech. Checkout the latest things I've been working on!"
           />
-          <meta property="og:image" content="/markcolby_ogImage.jpg" />
+          <meta
+            property="og:image"
+            content="https://markcolby.dev/markcolby_ogImage.jpg"
+          />
+          <meta
+            property="og:image:secure_url"
+            content="https://markcolby.dev/markcolby_ogImage.jpg"
+          />
           <meta property="og:locale" content="en_US" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://markcolby.dev" />
