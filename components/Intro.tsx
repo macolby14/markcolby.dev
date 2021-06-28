@@ -70,7 +70,7 @@ export function Intro() {
             <i className="fab fa-github" />
           </a>
           <a
-            href="mailto:macolby14@gmail.com"
+            href="mailto:contact@markcolby.dev"
             target="_blank"
             rel="noopener noreferrer"
           >
