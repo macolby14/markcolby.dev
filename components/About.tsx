@@ -16,28 +16,13 @@ export function About() {
     <Wrapper id="about">
       <Box maxWidth={1200} gutter={96} mobileGutter={16}>
         <h2>About me</h2>
-        <p>Hey! I’m Mark, a software engineer who loves full-stack web tech.</p>
         <p>
-          I was first introduced to programming in high school. In my computer
-          science class we made games using Java and I was instantly captivated,
-          staying up night after night to work on my Bomberman game. The ability
-          to turn code into tools that can automate work and organize
-          information immediately became my most powerful skill.
+          Hey! I’m Mark, a software engineer who loves full-stack technologies.
         </p>
         <p>
-          I joined the Navy after college and got to see the world on a
-          submarine. Kind of. Actually, I couldn’t really see much most the time
-          because we were underwater… But I really enjoyed my time working in
-          both the engine room and in the control room, and I think submarines
-          are awesome pieces of technology!
-        </p>
-        <p>
-          I’m currently stationed in Hawaii, preparing to transition to my first
-          job outside of the military. When I’m not enjoying Hawaii’s beaches or
-          trails with my wife, I use my time reading about code, listening about
-          code, or actually coding. I’m seeking a full-time role as a software
-          engineer at a company where I can continue to grow and make a positive
-          impact.
+          I am currently a Forward Deployed Software Engineer at Palantir in
+          support of the US Government. I previously served for 7 years in the
+          US Navy as a submarine officer.
         </p>
       </Box>
     </Wrapper>
