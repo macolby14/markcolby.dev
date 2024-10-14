@@ -16,13 +16,11 @@ export function About() {
     <Wrapper id="about">
       <Box maxWidth={1200} gutter={96} mobileGutter={16}>
         <h2>About me</h2>
+        <p>Hey! I’m Mark, a developer who loves full-stack technologies.</p>
         <p>
-          Hey! I’m Mark, a software engineer who loves full-stack technologies.
-        </p>
-        <p>
-          I am currently a Forward Deployed Software Engineer at Palantir in
-          support of the US Government. I previously served for 7 years in the
-          US Navy as a submarine officer.
+          I am currently a software engineer at Bloomberg. I was previously a
+          forward deployed software engineer at Palantir and was a submarine
+          officer in the US Navy.
         </p>
       </Box>
     </Wrapper>
