@@ -27,9 +27,7 @@ const SIZES = {
   },
 };
 
-const ButtonBase = styled.a<{ style: any }>`
-  text-decoration: none;
-  color: inherit;
+const ButtonBase = styled.div<{ style: any }>`
   font-weight: var(--font-weight-medium);
   font-size: var(--fontSize);
   padding: var(--padding);
@@ -71,10 +69,13 @@ export function ButtonLink({ variant, size, href, children }: Props) {
   }
 
   return (
-    <Link href={href} passHref>
-      <Component style={styles} target="_black" rel="noopener noreferrer">
-        {children}
-      </Component>
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
+      <Component style={styles}>{children}</Component>
     </Link>
   );
 }

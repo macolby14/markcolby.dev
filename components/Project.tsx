@@ -57,11 +57,6 @@ const ProjectDescription = styled.div`
   }
 `;
 
-const StyledLink = styled.a`
-  text-decoration: none;
-  color: inherit;
-`;
-
 const ReadMoreStyle = styled.div`
   display: flex;
   align-items: center;
@@ -103,53 +98,54 @@ export function Project({
 }: Props) {
   return (
     <Wrapper className={className}>
-      <Link href={`/project/${slug}`} passHref>
-        <StyledLink>
-          <FlexWrapper>
-            <ImageContainer>
-              <img src={previewImg.src} alt={previewImg.alt} />
-            </ImageContainer>
-            <ProjectDescription>
-              <h3>{title}</h3>
-              <p>{description}</p>
-              <TechIcons tech={tech} />
-              <ReadMoreStyle>
-                <p>Read More</p>
-                <svg width="36" height="12" viewBox="0 0 36 12" fill="none">
-                  <path
-                    d="M0.75 6H11.25 M6 0.75L11.25 6L6 11.25"
-                    stroke="black"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    style={{
-                      opacity: "1",
-                    }}
-                  />
-                  <path
-                    d="M15 10L19.5 5.5L15 1"
-                    stroke="black"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M23 10L27.5 5.5L23 1"
-                    stroke="black"
-                    strokeOpacity="0.66"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M31 10L35.5 5.5L31 1"
-                    stroke="black"
-                    strokeOpacity="0.35"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </ReadMoreStyle>
-            </ProjectDescription>
-          </FlexWrapper>
-        </StyledLink>
+      <Link
+        href={`/project/${slug}`}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <FlexWrapper>
+          <ImageContainer>
+            <img src={previewImg.src} alt={previewImg.alt} />
+          </ImageContainer>
+          <ProjectDescription>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <TechIcons tech={tech} />
+            <ReadMoreStyle>
+              <p>Read More</p>
+              <svg width="36" height="12" viewBox="0 0 36 12" fill="none">
+                <path
+                  d="M0.75 6H11.25 M6 0.75L11.25 6L6 11.25"
+                  stroke="black"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  style={{
+                    opacity: "1",
+                  }}
+                />
+                <path
+                  d="M15 10L19.5 5.5L15 1"
+                  stroke="black"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M23 10L27.5 5.5L23 1"
+                  stroke="black"
+                  strokeOpacity="0.66"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M31 10L35.5 5.5L31 1"
+                  stroke="black"
+                  strokeOpacity="0.35"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </ReadMoreStyle>
+          </ProjectDescription>
+        </FlexWrapper>
       </Link>
     </Wrapper>
   );

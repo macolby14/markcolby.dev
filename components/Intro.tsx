@@ -59,6 +59,7 @@ export function Intro() {
             href="https://www.linkedin.com/in/macolby14/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
             <i className="fab fa-linkedin-in" />
           </a>
@@ -66,6 +67,7 @@ export function Intro() {
             href="https://github.com/macolby14"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub"
           >
             <i className="fab fa-github" />
           </a>
@@ -73,6 +75,7 @@ export function Intro() {
             href="mailto:contact@markcolby.dev"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Email"
           >
             <i className="fas fa-envelope" />
           </a>

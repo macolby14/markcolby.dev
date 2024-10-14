@@ -126,9 +126,7 @@ export function ProjectNav() {
     <Wrapper>
       <List>
         <li>
-          <Link href="/#intro">
-            <a>Home</a>
-          </Link>
+          <Link href="/#intro">Home</Link>
         </li>
         <Separator>/</Separator>
         <li>
