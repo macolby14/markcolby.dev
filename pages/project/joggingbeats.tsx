@@ -64,7 +64,7 @@ const summary = (
 );
 
 const links = {
-  liveUrl: "https://joggingbeats.com",
+  liveUrl: "https://jog.markcolby.dev",
   codeUrl: "https://github.com/macolby14/jogging-beats",
 };
 
