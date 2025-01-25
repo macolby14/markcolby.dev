@@ -91,12 +91,12 @@ export function Layout({
 
   const buttonComponent = customButtons ?? (
     <LinkWrapper>
-      {liveUrl != undefined && (
+      {liveUrl != null && (
         <ButtonLink variant="outline" size="medium" href={liveUrl}>
           Live Site
         </ButtonLink>
       )}
-      {codeUrl != undefined && (
+      {codeUrl != null && (
         <ButtonLink variant="outline" size="medium" href={codeUrl}>
           Repository
         </ButtonLink>
