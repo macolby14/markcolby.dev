@@ -68,7 +68,6 @@ const summary = (
 );
 
 const links = {
-  liveUrl: "https://operation-on-track.vercel.app/",
   codeUrl: "https://github.com/macolby14/operation-on-track",
 };
 

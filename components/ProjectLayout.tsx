@@ -68,8 +68,8 @@ interface LayoutProps {
   motivation: React.ReactNode;
   summary: React.ReactNode;
   links: {
-    liveUrl: string;
-    codeUrl: string;
+    liveUrl?: string;
+    codeUrl?: string;
   };
   customButtons?: React.ReactNode;
   images: ImageInfo[];
@@ -91,12 +91,16 @@ export function Layout({
 
   const buttonComponent = customButtons ?? (
     <LinkWrapper>
-      <ButtonLink variant="outline" size="medium" href={liveUrl}>
-        Live Site
-      </ButtonLink>
-      <ButtonLink variant="outline" size="medium" href={codeUrl}>
-        Repository
-      </ButtonLink>
+      {liveUrl != undefined && (
+        <ButtonLink variant="outline" size="medium" href={liveUrl}>
+          Live Site
+        </ButtonLink>
+      )}
+      {codeUrl != undefined && (
+        <ButtonLink variant="outline" size="medium" href={codeUrl}>
+          Repository
+        </ButtonLink>
+      )}
     </LinkWrapper>
   );
 
